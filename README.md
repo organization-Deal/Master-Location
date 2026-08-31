@@ -50,3 +50,7 @@
 - เพิ่มช่อง LINE และ Website
 - ปรับ Duplicate matcher เพื่อลด false positive จากชื่อสั้นทั่วไป เช่น REST/Bar
 - Migration อัตโนมัติ: อัปไฟล์ทับโดเมนเดิมแล้ว Lead เดิมยังอยู่ พร้อมเติมข้อมูลชุดใหม่
+
+
+## อัปเดต 31 ส.ค. 2026 — Research ภาคอีสาน
+เพิ่ม 11 Lead ใหม่ที่ไม่ซ้ำ Installed list: DNA UDONTHANI, Ultra Club Khonkaen, ตะวันแดง มหาซน ณ สุรินทร์, Big Apple Roi Et, 101 Pavilion, ตะวันแดงสาดแสงทอง มหาสารคาม, Full House Surin, U-BAR UBON, MOM : Ministry of Music, 99 Bar Khonkaen และ TEMPO The Rhythm Of The Night พร้อมข้อมูลติดต่อ/เวลาเปิด/ช่องทาง Social เท่าที่ตรวจสอบไว้ใน Research ชุดล่าสุด ระบบ Migration จะเติมรายการเหล่านี้ลง localStorage เดิมโดยไม่ลบข้อมูลที่ทีมกรอกเอง
