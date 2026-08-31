@@ -1,29 +1,30 @@
-# Deal Location Workspace
+# DEAL ระบบบริหารโลเคชั่น
 
-เว็บ Workspace สำหรับทีม Location Acquisition โดยแยกงาน Prospecting ออกจาก Master Location / Contract workflow
+เว็บสำหรับทีมพัฒนาโลเคชั่น โดยแยกงาน “หาร้านและติดตามร้าน” ออกจากงานเอกสาร Master Location / สัญญา เพื่อให้ทีมทำงานเร็วและวัดผลได้ชัดเจน
 
-## วิธีเปิด
-- เปิด `index.html` ได้ทันทีบน Browser
-- หรืออัปโฟลเดอร์ทั้งหมดขึ้น Cloudflare Pages / GitHub Pages ได้เลย (Static Site, ไม่ต้อง build)
+## วิธีเปิดใช้งาน
+- เปิดไฟล์ `index.html` ได้ทันทีในเบราว์เซอร์
+- หรืออัปโฟลเดอร์ทั้งหมดขึ้น Cloudflare Pages / GitHub Pages ได้เลย
+- เป็นเว็บแบบ Static ไม่ต้องสั่ง Build
 
 ## ฟีเจอร์หลัก
-- Monthly KPI: 300 ร้านใหม่ / 20 ร้านที่ปิดได้ (แก้ Target ได้)
-- Target Location CRM + Search / Filter / Score / Owner / Follow-up
-- Duplicate checker เทียบกับ Installed Locations ที่ seed จากรายชื่อที่ให้มา
-- Pipeline แบบ Kanban
-- On Tour Intelligence: Paste `วง | ร้าน | จังหวัด | วันที่ | URL` แล้วแตกเป็น Candidate Location
-- Research Inbox เช็กร้านเก่าก่อนสร้าง Lead
-- Team Performance
-- Contact Brief สำหรับเตรียมทีมก่อนโทร/ทัก
-- Export Target CSV
-- Export Won locations เป็น CSV สำหรับส่งต่อ Master Location เดิม
-- JSON Backup / Restore
-- เก็บข้อมูลใน localStorage ของ Browser (เวอร์ชันนี้ยังไม่ใช่ multi-user database)
+- KPI ประจำเดือน: 300 ร้านใหม่ / ปิดได้ 20 ร้าน และแก้เป้าหมายได้
+- ระบบร้านเป้าหมาย พร้อมค้นหา / ตัวกรอง / คะแนน / ผู้รับผิดชอบ / วันติดตาม
+- ตรวจร้านซ้ำกับรายชื่อร้านที่เคยติดตั้งแล้วอัตโนมัติ
+- ขั้นตอนการติดต่อแบบ Kanban
+- ระบบข้อมูลทัวร์วงดนตรี: วาง `วง | ร้าน | จังหวัด | วันที่ | URL` แล้วแตกเป็นร้านเป้าหมาย
+- กล่องข้อมูลที่ค้นหา ตรวจร้านเก่าก่อนเพิ่มร้านใหม่
+- หน้าผลงานทีม
+- ข้อมูลเตรียมก่อนติดต่อร้าน กดคัดลอกให้ทีมใช้ก่อนโทรหรือทัก
+- ส่งออกร้านเป้าหมายเป็น CSV
+- ส่งออกร้านที่ปิดได้เป็น CSV เพื่อส่งต่อเข้า Master Location เดิม
+- สำรอง / นำเข้าข้อมูลด้วย JSON
+- ข้อมูลเวอร์ชันนี้เก็บใน localStorage ของเบราว์เซอร์ จึงยังไม่ใช่ระบบหลายผู้ใช้ร่วมฐานข้อมูลเดียวกัน
 
-## แนวทาง production ต่อ
+## ขั้นต่อไปหากจะใช้จริงทั้งทีม
 1. เปลี่ยน localStorage เป็น Cloudflare D1
-2. เพิ่ม Login + Team roles
-3. Activity log ต่อ user
-4. Integrate Google Maps / Places หรือข้อมูลภายนอกที่ได้รับอนุญาต
-5. Import Excel Master Location ผ่าน backend
-6. Notification LINE OA เมื่อ Follow-up ถึงกำหนด
+2. เพิ่มระบบเข้าสู่ระบบและสิทธิ์ของสมาชิกทีม
+3. เก็บประวัติการทำงานแยกรายคน
+4. เชื่อม Google Maps / Places หรือข้อมูลภายนอกที่ได้รับอนุญาต
+5. นำเข้า Excel Master Location ผ่านระบบหลังบ้าน
+6. แจ้งเตือน LINE OA เมื่อถึงกำหนดติดตามร้าน

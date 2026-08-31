@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="theme-color" content="#111111" />
-  <title>Deal Location Workspace</title>
+  <title>DEAL ระบบบริหารโลเคชั่น</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -12,26 +12,26 @@
     <aside class="sidebar" id="sidebar">
       <div class="brand">
         <div class="brand-mark">D</div>
-        <div><strong>DEAL</strong><span>Location Workspace</span></div>
+        <div><strong>DEAL</strong><span>ระบบบริหารโลเคชั่น</span></div>
       </div>
       <nav id="nav">
-        <button class="nav-item active" data-view="dashboard"><span>⌂</span> Dashboard</button>
-        <button class="nav-item" data-view="leads"><span>◎</span> Target Locations <b id="navLeadCount">0</b></button>
-        <button class="nav-item" data-view="pipeline"><span>▥</span> Pipeline</button>
-        <button class="nav-item" data-view="tour"><span>♫</span> On Tour Intelligence</button>
-        <button class="nav-item" data-view="installed"><span>✓</span> Installed Locations <b id="navInstalledCount">0</b></button>
-        <button class="nav-item" data-view="team"><span>◉</span> Team Performance</button>
-        <button class="nav-item" data-view="settings"><span>⚙</span> Settings & Data</button>
+        <button class="nav-item active" data-view="dashboard"><span>⌂</span> ภาพรวม</button>
+        <button class="nav-item" data-view="leads"><span>◎</span> ร้านเป้าหมาย <b id="navLeadCount">0</b></button>
+        <button class="nav-item" data-view="pipeline"><span>▥</span> ขั้นตอนการติดต่อ</button>
+        <button class="nav-item" data-view="tour"><span>♫</span> ข้อมูลทัวร์วงดนตรี</button>
+        <button class="nav-item" data-view="installed"><span>✓</span> ร้านที่ติดตั้งแล้ว <b id="navInstalledCount">0</b></button>
+        <button class="nav-item" data-view="team"><span>◉</span> ผลงานทีม</button>
+        <button class="nav-item" data-view="settings"><span>⚙</span> ตั้งค่าและข้อมูล</button>
       </nav>
       <div class="sidebar-foot">
         <div class="goal-mini">
-          <span>Monthly goal</span>
-          <strong><i id="miniLeads">0</i>/<i id="miniLeadTarget">300</i> leads</strong>
+          <span>เป้าหมายประจำเดือน</span>
+          <strong><i id="miniLeads">0</i>/<i id="miniLeadTarget">300</i> รายชื่อร้าน</strong>
           <div class="mini-bar"><i id="miniLeadBar"></i></div>
-          <strong><i id="miniWon">0</i>/<i id="miniWonTarget">20</i> locations</strong>
+          <strong><i id="miniWon">0</i>/<i id="miniWonTarget">20</i> ร้านที่ปิดได้</strong>
           <div class="mini-bar"><i id="miniWonBar"></i></div>
         </div>
-        <small>Prospect first. Paperwork later.</small>
+        <small>หาร้านให้ได้ก่อน งานเอกสารค่อยตามมา</small>
       </div>
     </aside>
 
@@ -40,13 +40,13 @@
         <div class="topbar-left">
           <button class="icon-btn mobile-only" id="menuBtn">☰</button>
           <div>
-            <div class="eyebrow" id="pageEyebrow">LOCATION ACQUISITION</div>
-            <h1 id="pageTitle">Dashboard</h1>
+            <div class="eyebrow" id="pageEyebrow">ฝ่ายพัฒนาโลเคชั่น</div>
+            <h1 id="pageTitle">ภาพรวม</h1>
           </div>
         </div>
         <div class="top-actions">
-          <button class="btn ghost" id="pasteResearchBtn">Paste research</button>
-          <button class="btn primary" id="quickAddBtn">+ Add target</button>
+          <button class="btn ghost" id="pasteResearchBtn">วางข้อมูลที่ค้นหา</button>
+          <button class="btn primary" id="quickAddBtn">+ เพิ่มร้านเป้าหมาย</button>
         </div>
       </header>
 
@@ -56,50 +56,50 @@
 
   <div class="modal-backdrop hidden" id="modalBackdrop"></div>
   <div class="modal hidden" id="leadModal" role="dialog" aria-modal="true">
-    <div class="modal-head"><div><div class="eyebrow">TARGET LOCATION</div><h2 id="modalTitle">เพิ่มร้านเป้าหมาย</h2></div><button class="icon-btn" data-close-modal>×</button></div>
+    <div class="modal-head"><div><div class="eyebrow">ร้านเป้าหมาย</div><h2 id="modalTitle">เพิ่มร้านเป้าหมาย</h2></div><button class="icon-btn" data-close-modal>×</button></div>
     <form id="leadForm" class="form-grid">
       <input type="hidden" name="id" />
       <label class="span-2">ชื่อร้าน / สถานที่<input name="venue" required placeholder="เช่น The Example Bar" /></label>
       <label>จังหวัด<input name="province" placeholder="เชียงใหม่" /></label>
       <label>โซน / อำเภอ<input name="area" placeholder="นิมมาน / เมือง" /></label>
-      <label>ประเภท<select name="type"><option>ร้านเหล้า / ผับ</option><option>Bar & Bistro</option><option>ร้านอาหาร</option><option>สนามกีฬา / มวย</option><option>ตลาด / Community</option><option>อื่นๆ</option></select></label>
-      <label>แหล่งที่มา<select name="source"><option>วงดนตรี On Tour</option><option>Google / Maps</option><option>Facebook</option><option>Instagram / TikTok</option><option>ร้านแนะนำร้าน</option><option>ทีมสำรวจ</option><option>อื่นๆ</option></select></label>
-      <label>วง / Source keyword<input name="band" placeholder="ชื่อวง / keyword" /></label>
+      <label>ประเภท<select name="type"><option>ร้านเหล้า / ผับ</option><option value="Bar & Bistro">บาร์และบิสโทร</option><option>ร้านอาหาร</option><option>สนามกีฬา / มวย</option><option value="ตลาด / Community">ตลาด / พื้นที่ชุมชน</option><option>อื่นๆ</option></select></label>
+      <label>แหล่งที่มา<select name="source"><option value="วงดนตรีออกทัวร์">วงดนตรีออกทัวร์</option><option>Google / Maps</option><option>Facebook</option><option>Instagram / TikTok</option><option>ร้านแนะนำร้าน</option><option>ทีมสำรวจ</option><option>อื่นๆ</option></select></label>
+      <label>วง / คำค้นหาแหล่งข้อมูล<input name="band" placeholder="ชื่อวง / คำค้นหา" /></label>
       <label>หลักฐาน / URL<input name="sourceUrl" placeholder="https://..." /></label>
       <label>ชื่อผู้ติดต่อ<input name="contact" placeholder="เจ้าของร้าน / ผู้จัดการ" /></label>
       <label>เบอร์โทร<input name="phone" placeholder="08x-xxx-xxxx" /></label>
-      <label>ช่องทาง<select name="channel"><option>ยังไม่ทราบ</option><option>โทรศัพท์</option><option>LINE</option><option>Facebook</option><option>Instagram</option><option>Email</option><option>เข้าหน้าร้าน</option></select></label>
-      <label>ผู้รับผิดชอบ<input name="owner" list="ownerList" placeholder="ชื่อทีม" /><datalist id="ownerList"><option>ทีม Location A</option><option>ทีม Location B</option><option>ยังไม่มอบหมาย</option></datalist></label>
-      <label>Stage<select name="stage"><option value="new">New</option><option value="research">Researching</option><option value="ready">Ready to contact</option><option value="contacted">Contacted</option><option value="interested">Interested</option><option value="survey">Site survey</option><option value="negotiating">Negotiating</option><option value="won">Won</option><option value="lost">Lost</option></select></label>
-      <label>นัด Follow-up<input name="nextFollowUp" type="date" /></label>
+      <label>ช่องทาง<select name="channel"><option>ยังไม่ทราบ</option><option>โทรศัพท์</option><option>LINE</option><option>Facebook</option><option>Instagram</option><option value="Email">อีเมล</option><option>เข้าหน้าร้าน</option></select></label>
+      <label>ผู้รับผิดชอบ<input name="owner" list="ownerList" placeholder="ชื่อทีม" /><datalist id="ownerList"><option>ทีมโลเคชั่น A</option><option>ทีมโลเคชั่น B</option><option>ยังไม่มอบหมาย</option></datalist></label>
+      <label>สถานะ<select name="stage"><option value="new">ร้านใหม่</option><option value="research">กำลังหาข้อมูล</option><option value="ready">พร้อมติดต่อ</option><option value="contacted">ติดต่อแล้ว</option><option value="interested">ร้านสนใจ</option><option value="survey">นัดสำรวจพื้นที่</option><option value="negotiating">กำลังเจรจา</option><option value="won">ปิดร้านได้</option><option value="lost">ไม่สำเร็จ</option></select></label>
+      <label>นัดติดตามครั้งถัดไป<input name="nextFollowUp" type="date" /></label>
       <label>ความจุโดยประมาณ<input name="capacity" type="number" min="0" placeholder="300" /></label>
       <label>เวลาเปิด–ปิด<input name="hours" placeholder="18:00–02:00" /></label>
-      <label>รูปแบบค่าตอบแทน<input name="dealModel" placeholder="เช่น Revenue share 30%" /></label>
-      <label>Map / Location URL<input name="mapUrl" placeholder="https://maps..." /></label>
+      <label>รูปแบบค่าตอบแทน<input name="dealModel" placeholder="เช่น แบ่งรายได้ 30%" /></label>
+      <label>ลิงก์แผนที่ / โลเคชั่น<input name="mapUrl" placeholder="https://maps..." /></label>
       <div class="span-2 score-box">
-        <div><strong>Qualification score</strong><small>ติ๊กเฉพาะข้อมูลที่มีหลักฐานหรือคุยกับร้านแล้ว</small></div>
+        <div><strong>คะแนนความเหมาะสม</strong><small>ติ๊กเฉพาะข้อมูลที่มีหลักฐานหรือคุยกับร้านแล้ว</small></div>
         <div class="check-grid">
-          <label><input type="checkbox" name="qTraffic" /> คนเยอะ/Traffic ดี <b>+25</b></label>
+          <label><input type="checkbox" name="qTraffic" /> คนเยอะ / ลูกค้าหมุนเวียนดี <b>+25</b></label>
           <label><input type="checkbox" name="qAudience" /> กลุ่มลูกค้าตรง <b>+20</b></label>
           <label><input type="checkbox" name="qLateHours" /> เปิดดึก <b>+10</b></label>
           <label><input type="checkbox" name="qSpace" /> มีจุดวางชัดเจน <b>+10</b></label>
           <label><input type="checkbox" name="qPower" /> มีปลั๊กไฟ <b>+5</b></label>
-          <label><input type="checkbox" name="qDeal" /> เปิดรับ Revenue Share <b>+15</b></label>
+          <label><input type="checkbox" name="qDeal" /> เปิดรับการแบ่งรายได้ <b>+15</b></label>
           <label><input type="checkbox" name="qReputation" /> ร้านมีชื่อ/วงดังลง <b>+15</b></label>
         </div>
       </div>
       <label class="span-2">โน้ต / สิ่งที่ต้องรู้ก่อนติดต่อ<textarea name="notes" rows="4" placeholder="ใครเป็นคนตัดสินใจ, ร้านแนวไหน, วงที่ไปเล่น, ช่วงเวลาที่ควรโทร, ข้อเสนอที่น่าจะเหมาะ..."></textarea></label>
       <div class="duplicate-warning hidden span-2" id="duplicateWarning"></div>
-      <div class="modal-actions span-2"><button type="button" class="btn ghost" data-close-modal>ยกเลิก</button><button class="btn primary" type="submit">บันทึก Location</button></div>
+      <div class="modal-actions span-2"><button type="button" class="btn ghost" data-close-modal>ยกเลิก</button><button class="btn primary" type="submit">บันทึกร้าน</button></div>
     </form>
   </div>
 
   <div class="modal hidden wide" id="researchModal" role="dialog" aria-modal="true">
-    <div class="modal-head"><div><div class="eyebrow">RESEARCH INBOX</div><h2>วางรายชื่อจากวง On Tour / Research</h2></div><button class="icon-btn" data-close-modal>×</button></div>
-    <div class="research-help">วาง 1 ร้านต่อ 1 บรรทัด รองรับรูปแบบ <code>วง | ร้าน | จังหวัด | วันที่ | URL</code> หรือใส่แค่ชื่อร้านก็ได้ ระบบจะเช็กซ้ำกับร้านที่ติดตั้งแล้วทันที</div>
+    <div class="modal-head"><div><div class="eyebrow">กล่องข้อมูลที่ค้นหา</div><h2>วางรายชื่อจากตารางทัวร์วงดนตรี / ข้อมูลที่ค้นหา</h2></div><button class="icon-btn" data-close-modal>×</button></div>
+    <div class="research-help">วาง 1 ร้านต่อ 1 บรรทัด รองรับรูปแบบ <code>วง | ร้าน | จังหวัด | วันที่ | URL</code> หรือใส่แค่ชื่อร้านก็ได้ ระบบจะตรวจร้านซ้ำกับร้านที่ติดตั้งแล้วทันที</div>
     <textarea id="researchPaste" class="big-textarea" placeholder="Tilly Birds | Example Bar | เชียงใหม่ | 2026-09-05 | https://...\nThree Man Down | Another Pub | ขอนแก่น | 2026-09-06"></textarea>
     <div id="researchPreview"></div>
-    <div class="modal-actions"><button class="btn ghost" data-close-modal>ยกเลิก</button><button class="btn primary" id="importResearchBtn">Import เข้า Target Locations</button></div>
+    <div class="modal-actions"><button class="btn ghost" data-close-modal>ยกเลิก</button><button class="btn primary" id="importResearchBtn">นำเข้าเป็นร้านเป้าหมาย</button></div>
   </div>
 
   <div class="toast" id="toast"></div>
