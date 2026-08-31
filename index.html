@@ -62,13 +62,20 @@
       <label class="span-2">ชื่อร้าน / สถานที่<input name="venue" required placeholder="เช่น The Example Bar" /></label>
       <label>จังหวัด<input name="province" placeholder="เชียงใหม่" /></label>
       <label>โซน / อำเภอ<input name="area" placeholder="นิมมาน / เมือง" /></label>
+      <label class="span-2">ที่อยู่ร้าน<input name="address" placeholder="เลขที่ ถนน ตำบล อำเภอ จังหวัด รหัสไปรษณีย์" /></label>
       <label>ประเภท<select name="type"><option>ร้านเหล้า / ผับ</option><option value="Bar & Bistro">บาร์และบิสโทร</option><option>ร้านอาหาร</option><option>สนามกีฬา / มวย</option><option value="ตลาด / Community">ตลาด / พื้นที่ชุมชน</option><option>อื่นๆ</option></select></label>
-      <label>แหล่งที่มา<select name="source"><option value="วงดนตรีออกทัวร์">วงดนตรีออกทัวร์</option><option>Google / Maps</option><option>Facebook</option><option>Instagram / TikTok</option><option>ร้านแนะนำร้าน</option><option>ทีมสำรวจ</option><option>อื่นๆ</option></select></label>
+      <label>แหล่งที่มา<select name="source"><option value="วงดนตรีออกทัวร์">วงดนตรีออกทัวร์</option><option>Google / Maps</option><option>TikTok / Google Maps</option><option>Research ภาคเหนือ / Social Active</option><option>Facebook</option><option>Instagram / TikTok</option><option>ร้านแนะนำร้าน</option><option>ทีมสำรวจ</option><option>อื่นๆ</option></select></label>
       <label>วง / คำค้นหาแหล่งข้อมูล<input name="band" placeholder="ชื่อวง / คำค้นหา" /></label>
       <label>หลักฐาน / URL<input name="sourceUrl" placeholder="https://..." /></label>
       <label>ชื่อผู้ติดต่อ<input name="contact" placeholder="เจ้าของร้าน / ผู้จัดการ" /></label>
-      <label>เบอร์โทร<input name="phone" placeholder="08x-xxx-xxxx" /></label>
-      <label>ช่องทาง<select name="channel"><option>ยังไม่ทราบ</option><option>โทรศัพท์</option><option>LINE</option><option>Facebook</option><option>Instagram</option><option value="Email">อีเมล</option><option>เข้าหน้าร้าน</option></select></label>
+      <label>เบอร์โทรหลัก<input name="phone" placeholder="08x-xxx-xxxx" /></label>
+      <label>เบอร์สำรอง<input name="altPhone" placeholder="ถ้ามี" /></label>
+      <label>ช่องทางหลัก<select name="channel"><option>ยังไม่ทราบ</option><option>โทรศัพท์</option><option>LINE</option><option>Facebook</option><option>Instagram</option><option>TikTok</option><option value="Email">อีเมล</option><option>เข้าหน้าร้าน</option></select></label>
+      <label>Facebook<input name="facebook" placeholder="ชื่อเพจ / URL" /></label>
+      <label>Instagram<input name="instagram" placeholder="@account / URL" /></label>
+      <label>TikTok<input name="tiktok" placeholder="@account / URL" /></label>
+      <label>LINE<input name="line" placeholder="@line / ลิงก์ LINE" /></label>
+      <label>Website<input name="website" placeholder="https://..." /></label>
       <label>ผู้รับผิดชอบ<input name="owner" list="ownerList" placeholder="ชื่อทีม" /><datalist id="ownerList"><option>ทีมโลเคชั่น A</option><option>ทีมโลเคชั่น B</option><option>ยังไม่มอบหมาย</option></datalist></label>
       <label>สถานะ<select name="stage"><option value="new">ร้านใหม่</option><option value="research">กำลังหาข้อมูล</option><option value="ready">พร้อมติดต่อ</option><option value="contacted">ติดต่อแล้ว</option><option value="interested">ร้านสนใจ</option><option value="survey">นัดสำรวจพื้นที่</option><option value="negotiating">กำลังเจรจา</option><option value="won">ปิดร้านได้</option><option value="lost">ไม่สำเร็จ</option></select></label>
       <label>นัดติดตามครั้งถัดไป<input name="nextFollowUp" type="date" /></label>
