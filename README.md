@@ -54,3 +54,7 @@
 
 ## อัปเดต 31 ส.ค. 2026 — Research ภาคอีสาน
 เพิ่ม 11 Lead ใหม่ที่ไม่ซ้ำ Installed list: DNA UDONTHANI, Ultra Club Khonkaen, ตะวันแดง มหาซน ณ สุรินทร์, Big Apple Roi Et, 101 Pavilion, ตะวันแดงสาดแสงทอง มหาสารคาม, Full House Surin, U-BAR UBON, MOM : Ministry of Music, 99 Bar Khonkaen และ TEMPO The Rhythm Of The Night พร้อมข้อมูลติดต่อ/เวลาเปิด/ช่องทาง Social เท่าที่ตรวจสอบไว้ใน Research ชุดล่าสุด ระบบ Migration จะเติมรายการเหล่านี้ลง localStorage เดิมโดยไม่ลบข้อมูลที่ทีมกรอกเอง
+
+
+## V5 — จังหวัดรอง / Local Nightlife
+เพิ่ม Research Leads อีก 33 ร้าน จากจังหวัดที่ไม่ใช่ตลาดหลัก โดยเน้นหลักฐานการเคลื่อนไหวปี 2026, Event/Promotion/Social และเบอร์ติดต่อที่ตรวจพบ พร้อม Migration อัตโนมัติโดยไม่ลบข้อมูลเดิมใน localStorage.
