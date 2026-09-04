@@ -58,3 +58,7 @@
 
 ## V5 — จังหวัดรอง / Local Nightlife
 เพิ่ม Research Leads อีก 33 ร้าน จากจังหวัดที่ไม่ใช่ตลาดหลัก โดยเน้นหลักฐานการเคลื่อนไหวปี 2026, Event/Promotion/Social และเบอร์ติดต่อที่ตรวจพบ พร้อม Migration อัตโนมัติโดยไม่ลบข้อมูลเดิมใน localStorage.
+
+
+## V6 — Udon Thani expansion (2026-09-04)
+เพิ่ม Lead อุดรธานีใหม่ 9 ร้าน: HYPE Music Hall, Iconic.uth, Mars Udonthani, Sonic Bloom, Goodie music and bar, U-Tube Bar&Restaurant, Bar’ista Brasserie, บขส. บาร์ และ De Museum Bar & Live Music พร้อมเบอร์/Social/เวลาเปิด/Active evidence/Priority และ migration อัตโนมัติที่ไม่ลบข้อมูลผู้ใช้เดิม
